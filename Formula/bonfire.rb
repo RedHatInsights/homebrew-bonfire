@@ -1,4 +1,4 @@
-class YourTool < Formula
+class Bonfire < Formula
   include Language::Python::Virtualenv
 
   desc "Orchestrates ephemeral environments for testing cloud.redhat.com applications"
