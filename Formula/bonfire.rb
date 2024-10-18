@@ -7,10 +7,11 @@ class Bonfire < Formula
   sha256 "68a4116c50b9080d99813eb2d0762cfd967b25324c8694997a28483eb8bd4c9b"
   license "Apache-2.0"
 
-  depends_on "python@3.9"  # Adjust Python version as needed
+  depends_on "python@3.9"
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3")
+    venv.pip_install_and_link buildpath
   end
 
   test do
